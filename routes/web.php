@@ -15,7 +15,7 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::resource('/categories', \App\Http\Controllers\Admin\CategoryController::class);
     Route::resource('/menus', \App\Http\Controllers\Admin\MenuController::class);
     Route::resource('/tables', \App\Http\Controllers\Admin\TableController::class);
-    Route::resource('/reservation', \App\Http\Controllers\Admin\ReservationController::class);
+    Route::resource('/reservations', \App\Http\Controllers\Admin\ReservationController::class);
 });
 
 require __DIR__.'/auth.php';
