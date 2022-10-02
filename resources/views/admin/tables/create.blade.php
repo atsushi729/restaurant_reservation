@@ -45,6 +45,9 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                @error('status')
+                                <div class="text-sm text-red-400">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="ssm:col-span-6 pt-6">
                                 <label for="location" class="block text-sm font-medium text-white">Location</label>
@@ -55,6 +58,9 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                @error('location')
+                                <div class="text-sm text-red-400">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="pt-6">
                                 <button type="submit" class="px-4 py-2 bg-white rounded-lg">Store</button>

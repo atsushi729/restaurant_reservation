@@ -86,6 +86,9 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                @error('table_id')
+                                <div class="text-sm text-red-400">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="pt-6">
                                 <button type="submit" class="px-4 py-2 bg-white rounded-lg">Store</button>
