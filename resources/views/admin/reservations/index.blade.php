@@ -44,7 +44,7 @@
                                 {{ $reservation->res_date }}
                             </td>
                             <td class="py-4 px-6">
-                                {{ $reservation->table_id }}
+                                {{ $reservation->table->name }}
                             </td>
                             <td class="py-4 px-6">
                                 {{ $reservation->guest_number }}

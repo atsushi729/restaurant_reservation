@@ -30,7 +30,7 @@ class MenuController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.menus.create', compact('categories'));
+        return view('admin.menus.create', compact('categories'));;;
     }
 
     /**
@@ -54,7 +54,7 @@ class MenuController extends Controller
             $menu->categories()->attach($request->categories);
         }
 
-        return to_route('admin.menus.index');
+        return to_route('admin.menus.index')->with('success', 'Menu created successfully');;;
     }
 
     /**
@@ -102,7 +102,7 @@ class MenuController extends Controller
             $menu->categories()->sync($request->categories);
         }
 
-        return to_route('admin.menus.index');
+        return to_route('admin.menus.index')->with('success', 'Menu updated successfully');;;
     }
 
     /**
@@ -117,6 +117,6 @@ class MenuController extends Controller
         $menu->categories()->detach();
         $menu->delete();
 
-        return to_route('admin.menus.index');
+        return to_route('admin.menus.index')->with('success', 'Menu deleted successfully');;;
     }
 }

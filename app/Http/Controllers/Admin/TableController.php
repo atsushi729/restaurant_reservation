@@ -45,7 +45,7 @@ class TableController extends Controller
             'location' => $request->location,
         ]);
 
-        return to_route('admin.tables.index');
+        return to_route('admin.tables.index')->with('success', 'Table created successfully');;;;
     }
 
     /**
@@ -92,7 +92,7 @@ class TableController extends Controller
      */
     public function destroy(Table $table)
     {
-        $table->reservations()->delete();
+        $table->reservation()->delete();
         $table->delete();
 
         return to_route('admin.tables.index')->with('danger', 'Table daleted successfully.');
