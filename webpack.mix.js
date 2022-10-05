@@ -2,4 +2,12 @@
 
 let mix = require('laravel-mix');
 
-mix.js('src/app.js', 'dist').setPublicPath('dist');
+// mix.js('src/app.js', 'dist').setPublicPath('dist');
+mix.js('resources/js/app.js', 'public/js')
+    .postCss('resources/css/app.css', 'public/css', [
+        require('tailwindcss'),
+    ])
+// mix.styles([
+//     'public/css/app.css',
+// ], 'resources/css/app.css')
+.version();
