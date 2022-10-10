@@ -98,7 +98,8 @@
                                 </div>
                                 <div class="mt-6 p-4 flex justify-end">
                                     <button type="submit"
-                                            class="px-4 py-2 bg-indigo-700 hover:bg-indigo-700 rounded-lg text-yellow-400-700">Next</button>
+                                            class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-black">Next
+                                    </button>
                                 </div>
                             </form>
                         </div>

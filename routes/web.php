@@ -11,6 +11,7 @@ Route::get('/reservation/step-one', [\App\Http\Controllers\Frontend\ReservationC
 Route::post('/reservation/step-one', [\App\Http\Controllers\Frontend\ReservationController::class, 'storeStepOne'])->name('reservations.store.step.one');
 Route::get('/reservation/step-two', [\App\Http\Controllers\Frontend\ReservationController::class, 'stepTwo'])->name('reservations.step.two');
 Route::post('/reservation/step-two', [\App\Http\Controllers\Frontend\ReservationController::class, 'storeStepTwo'])->name('reservations.store.step.two');
+Route::get('/thankyou', [\App\Http\Controllers\Frontend\WelcomeController::class, 'thankyou'])->name('thankyou');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
