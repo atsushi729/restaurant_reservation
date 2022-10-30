@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [\App\Http\Controllers\Frontend\WelcomeController::class, 'index']);
+//Route::get('/', [\App\Http\Controllers\Frontend\WelcomeController::class, 'index']);
+Route::get('/', \App\Http\Actions\Home\IndexAction::class);
 
 Route::get('/categories', [\App\Http\Controllers\Frontend\CategoryController::class, 'index'])->name('categories.index');
 Route::get('/categories/{category}', [\App\Http\Controllers\Frontend\CategoryController::class, 'show'])->name('categories.show');
