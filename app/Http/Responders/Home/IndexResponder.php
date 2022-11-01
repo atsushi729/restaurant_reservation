@@ -2,20 +2,10 @@
 
 namespace App\Http\Responders\Home;
 
-use App\Http\Controllers\Controller;
-use App\Models\Category;
-
 class IndexResponder
 {
-    public function show()
+    public function show($specials)
     {
-        $specials = Category::where('name', 'specials')->first();
-
-        if (!$specials) {
-            $specials = Category::all()->first();
-            return view('welcome', compact('specials'));
-        }
-
-        return view('welcome', compact('specials'));
+        return view("welcome", compact("specials"));
     }
 }
